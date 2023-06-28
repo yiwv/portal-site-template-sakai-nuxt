@@ -4,16 +4,15 @@ import { PhotoService } from '@/service/PhotoService';
 import { getItemByCode } from '@/composables/useFirebase.js';
 import { useToast } from 'primevue/usetoast';
 
-const route = await useRoute()
+definePageMeta({
+    middleware: ['check-route-params']
+});
 
 const item = ref({});
 
-const code = route.params.code;
+const code = useState('routeParamCode').value
 
 async function loadItem () {
-
-    let code = route.params.code;
-
     item.value = await getItemByCode(code);
 }
 
