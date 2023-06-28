@@ -1,7 +1,7 @@
 <script setup>
-import AppLayout from '@/layouts/AppLayout.vue';
+import PortalLayout from '@/layouts/PortalLayout.vue';
 </script>
 
 <template>
-    <app-layout></app-layout>
+    <portal-layout></portal-layout>
 </template>
